@@ -2,8 +2,162 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-          </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Umar Alfarouk</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+            }
+            
+            .main-content {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+            }
+            
+            .hero {
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }
+            
+            .hero p {
+                font-size: 1.25rem;
+                opacity: 0.9;
+            }
+            
+            .footer {
+                background: rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                padding: 2rem 0;
+                margin-top: auto;
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 2rem;
+            }
+            
+            .footer-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+            
+            .footer-name {
+                font-size: 1.5rem;
+                font-weight: 600;
+                text-align: center;
+            }
+            
+            .link-cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.5rem;
+                width: 100%;
+            }
+            
+            .link-card {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 12px;
+                padding: 1.5rem;
+                text-decoration: none;
+                color: white;
+                transition: all 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .link-card:hover {
+                background: rgba(255, 255, 255, 0.15);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+            
+            .card-title {
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-bottom: 0.25rem;
+            }
+            
+            .card-description {
+                font-size: 0.9rem;
+                opacity: 0.8;
+                line-height: 1.4;
+            }
+            
+            .card-path {
+                font-size: 0.8rem;
+                opacity: 0.6;
+                font-family: 'Courier New', monospace;
+            }
+            
+            @media (max-width: 768px) {
+                .hero h1 {
+                    font-size: 2rem;
+                }
+                
+                .hero p {
+                    font-size: 1rem;
+                }
+                
+                .link-cards {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
     <body>
-        <div>Hello, world.</div>
+        <div class="main-content">
+            <div class="hero">
+                <h1>Hello, world.</h1>
+                <p>Welcome to my digital space</p>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-name">
+                        Umar Alfarouk
+                    </div>
+                    
+                    <div class="link-cards">
+                        <a href="/arc" class="link-card">
+                            <div class="card-title">🚀 ARC Router</div>
+                            <div class="card-description">A modern, lightweight client-side router for Svelte 5 with View Transition API support and advanced animation control.</div>
+                            <div class="card-path">/arc</div>
+                        </a>
+                        
+                        <a href="/wsx" class="link-card">
+                            <div class="card-title">🔌 WSX WebSocket</div>
+                            <div class="card-description">Type-safe WebSocket library with Zod validation for Elysia and browser clients. Enhanced WebSocket utilities for TypeScript and Svelte.</div>
+                            <div class="card-path">/wsx</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
